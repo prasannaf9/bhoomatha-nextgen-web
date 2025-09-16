@@ -2,10 +2,11 @@ import { useState } from "react";
 import { MapPin, Home, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import residentialImg from "@/assets/project-residential.jpg";
-import commercialImg from "@/assets/project-commercial.jpg";
-import mixedImg from "@/assets/project-mixed.jpg";
-import villaImg from "@/assets/project-villa.jpg";
+import Swapnalok from "@/assets/swapnalok.webp";
+import PurnaSai from "@/assets/purnasai.webp";
+import Sugandha from "@/assets/sugandha.webp";
+import Sindhu from "@/assets/sindhu.webp";
+
 
 const ProjectsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -15,19 +16,17 @@ const ProjectsSection = () => {
       id: 1,
       title: "Bhoomatha's SVN Swapnalok",
       category: "residential",
-      location: "Maddi Village",
-      image: residentialImg,
-      units: "320 Units",
+      location: "Thatipudu",
+      image: Swapnalok,
       status: "Ready to Move",
       description: "Luxury apartments with world-class amenities",
     },
     {
       id: 2,
-      title: "Sindhu Avenues",
+      title: "Purna Sai Township",
       category: "commercial",
-      location: "Dakamarri",
-      image: commercialImg,
-      units: "2.5M sq.ft",
+      location: "Maddi Village",
+      image: PurnaSai,
       status: "Under Construction",
       description: "Premium office spaces for global enterprises",
     },
@@ -36,18 +35,16 @@ const ProjectsSection = () => {
       title: "Sugandha Meadows",
       category: "mixed",
       location: "Bobbili",
-      image: mixedImg,
-      units: "Mixed Use",
+      image: Sugandha,
       status: "Launching Soon",
       description: "Retail, office, and residential complex",
     },
     {
       id: 4,
-      title: "Villa Paradise",
+      title: "Sindhu Avenues",
       category: "villa",
-      location: "Sarjapur Road, Bangalore",
-      image: villaImg,
-      units: "48 Villas",
+      location: "Dakamarri",
+      image: Sindhu,
       status: "Selling Fast",
       description: "Ultra-luxury villas with private gardens",
     },
@@ -89,7 +86,6 @@ const ProjectsSection = () => {
             <Button
               key={category.id}
               variant={activeCategory === category.id ? "default" : "outline"}
-              onClick={() => setActiveCategory(category.id)}
               className={activeCategory === category.id ? "btn-primary" : ""}
             >
               {category.label}
@@ -130,10 +126,6 @@ const ProjectsSection = () => {
                   <span className="flex items-center gap-1">
                     <MapPin className="h-4 w-4" />
                     {project.location}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Home className="h-4 w-4" />
-                    {project.units}
                   </span>
                 </div>
                 

@@ -41,8 +41,8 @@ const AboutSection = () => {
             </h2>
             
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-            Bhoomatha Real Estates & Developers Pvt Ltd
- Established in 2005 and incorporated as a Private Limited company in 2010 with ₹6 Crores authorized capital, Bhoomatha is a leading real estate developer in Andhra Pradesh and Telangana.
+            Bhoomatha Real Estates 
+ Established in 1999 and incorporated as a Private Limited company in 2010 with ₹6 Crores authorized capital, Bhoomatha is a leading real estate developer in Andhra Pradesh and Telangana.
             </p>
             
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">

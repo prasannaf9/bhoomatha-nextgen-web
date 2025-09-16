@@ -3,10 +3,12 @@ import { Menu, X, Search, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import logo from "@/assets/logo.webp";
+import { BookingForm } from "./BookingForm";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isBookingFormOpen, setIsBookingFormOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -87,8 +89,11 @@ const Navbar = () => {
             {/* Desktop Actions */}
             <div className="hidden lg:flex items-center gap-4">
               
-              <Button className="btn-hero">
-              Book Now
+              <Button 
+                className="btn-hero"
+                onClick={() => setIsBookingFormOpen(true)}
+              >
+                Book Now
               </Button>
             </div>
 
@@ -128,6 +133,11 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
+      
+      <BookingForm 
+        isOpen={isBookingFormOpen} 
+        onClose={() => setIsBookingFormOpen(false)} 
+      />
     </>
   );
 };
