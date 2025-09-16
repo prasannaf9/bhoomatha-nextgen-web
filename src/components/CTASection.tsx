@@ -1,7 +1,11 @@
 import { ArrowRight, Phone, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import { BookingForm } from "./BookingForm";
 
 const CTASection = () => {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
   return (
     <section className="py-20 bg-gradient-primary relative overflow-hidden">
       {/* Background Pattern */}
@@ -37,10 +41,12 @@ const CTASection = () => {
               size="lg"
               variant="outline"
               className="bg-white/10 backdrop-blur-sm text-primary-foreground border-primary-foreground/30 hover:bg-white/20"
+              onClick={() => setIsFormOpen(true)}
             >
               <Calendar className="mr-2 h-5 w-5" />
               Schedule Consultation
             </Button>
+            <BookingForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
           </div>
 
           {/* Quick Stats */}

@@ -75,21 +75,7 @@ Renowned for reliability, innovation, and creating green communities, Bhoomatha 
         </div>
 
         {/* Mission & Vision */}
-        <div className="grid md:grid-cols-2 gap-8 mt-16">
-          <div className="bg-gradient-primary text-primary-foreground p-8 rounded-2xl">
-            <h3 className="text-2xl font-bold mb-4 font-heading">Our Mission</h3>
-            <p className="text-primary-foreground/90">
-            Our mission is to develop legally approved, strategically located properties that deliver high value and sustainable communities, combining quality, transparency, and long-term growth for homeowners and investors.
-            </p>
-          </div>
-          
-          <div className="bg-gradient-to-br from-green-600 to-green-800 text-white p-8 rounded-2xl">
-            <h3 className="text-2xl font-bold mb-4 font-heading">Our Vision</h3>
-            <p className="text-white/90">
-            To lead in real estate by delivering high-value, sustainable, and legally secure properties. We create investment opportunities with premium infrastructure, long-term appreciation, and trusted, transparent business practices.
-            </p>
-          </div>
-        </div>
+     
       </div>
     </section>
   );

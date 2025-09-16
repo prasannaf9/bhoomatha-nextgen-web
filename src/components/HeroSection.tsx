@@ -29,7 +29,7 @@ const HeroSection = () => {
             </span>
             
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 font-heading leading-tight">
-        The Boomatha Growth Story
+        The Bhoomatha Growth Story
 
               <span className="block text-secondary">Legacy of Trust Future of Scale                
               </span>

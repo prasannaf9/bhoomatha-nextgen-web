@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Search, Phone, Mail } from "lucide-react";
+import { Menu, X, Search, Phone, Mail, Facebook, Twitter, Instagram, Linkedin, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import logo from "@/assets/logo.webp";
@@ -33,20 +33,28 @@ const Navbar = () => {
       <div className="hidden lg:block bg-primary text-primary-foreground py-2">
         <div className="container mx-auto px-6 flex justify-between items-center text-sm">
           <div className="flex items-center gap-6">
-            <a href="tel:+1234567890" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-              <Phone className="h-3 w-3" />
-              +91 7799753333
+            <a href="mailto:bhoomatha@gmail.com" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+              <Mail className="h-3 w-3" />
+              bhoomatha@gmail.com
             </a>
            
           </div>
-          <div className="flex items-center gap-4">
-            <Button 
-              variant="outline" 
-              size="sm" 
-              className="text-primary-foreground border-primary-foreground hover:border-primary-foreground/80 hover:text-primary-foreground/80 transition-all bg-transparent hover:bg-transparent"
-            >
-              Site visit
-            </Button>
+          <div className="flex items-center gap-3">
+            <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+              <Facebook className="h-4 w-4" />
+            </a>
+            <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+              <Twitter className="h-4 w-4" />
+            </a>
+            <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+              <Instagram className="h-4 w-4" />
+            </a>
+            <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+              <Linkedin className="h-4 w-4" />
+            </a>
+            <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+              <Youtube className="h-4 w-4" />
+            </a>
           </div>
         </div>
       </div>
@@ -87,14 +95,34 @@ const Navbar = () => {
             </div>
 
             {/* Desktop Actions */}
-            <div className="hidden lg:flex items-center gap-4">
-              
-              <Button 
-                className="btn-hero"
-                onClick={() => setIsBookingFormOpen(true)}
-              >
-                Book Now
-              </Button>
+            <div className="hidden lg:flex flex-col items-end">
+              <div className="flex items-center gap-2 mb-1">
+                <Phone className="h-4 w-4 text-primary" />
+                <a 
+                  href="tel:+917799753333" 
+                  className="text-lg font-semibold text-foreground hover:text-primary transition-colors whitespace-nowrap"
+                >
+                  +91 77997 53333
+                </a>
+              </div>
+              <div className="flex gap-2">
+                <Button 
+                  variant="outline"
+                  size="sm"
+                  className="border-primary text-primary hover:bg-primary/10 text-xs h-8 px-3"
+                  onClick={() => setIsBookingFormOpen(true)}
+                >
+                  Book Now
+                </Button>
+                <Button 
+                  variant="default"
+                  size="sm"
+                  className="bg-primary hover:bg-primary/90 text-xs h-8 px-3"
+                  onClick={() => window.open('https://wa.me/917799753333', '_blank')}
+                >
+                  Site Visit
+                </Button>
+              </div>
             </div>
 
             {/* Mobile Menu Toggle */}
