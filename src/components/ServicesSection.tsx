@@ -1,10 +1,51 @@
 import { Home, Building2, Briefcase, Building, Landmark, Factory, Home as HomeOutline, Building2 as Building2Outline, Briefcase as BriefcaseOutline, Building as BuildingOutline, Factory as FactoryOutline, Handshake, Play } from "lucide-react";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, type SVGProps } from "react";
 import { VideoModal } from "./VideoModal";
 import videoThumbnail from "@/assets/video-image.png";
 import whyImage from "@/assets/BHOOM.png";
 import { Button } from "./ui/button";
+
+// Inline SVG logos for Mission and Vision
+const MissionIcon = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={1.8}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden
+    {...props}
+  >
+    {/* Bullseye */}
+    <circle cx="12" cy="12" r="8" />
+    <circle cx="12" cy="12" r="4" />
+    <circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none" />
+    {/* Arrow to center */}
+    <path d="M15.5 8.5l5-5" />
+    <path d="M16.5 5.5h3v3" />
+    <path d="M12 12l3.5-3.5" />
+  </svg>
+);
+
+const VisionIcon = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={1.8}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden
+    {...props}
+  >
+    {/* Eye */}
+    <path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12z" />
+    <circle cx="12" cy="12" r="3" />
+    <circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none" />
+  </svg>
+);
 
 const ServicesSection = () => {
   const categories = [
@@ -90,11 +131,11 @@ const ServicesSection = () => {
           <div className="bg-gray-50 rounded-2xl p-8 md:p-12">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Bhoomatha Journey
+                Bhoomatha Journey
               </h2>
-            
-              
-              <div 
+
+
+              <div
                 className="relative group cursor-pointer rounded-xl overflow-hidden shadow-xl"
                 onClick={() => setIsVideoOpen(true)}
               >
@@ -111,9 +152,9 @@ const ServicesSection = () => {
                   </div>
                 </div>
               </div>
-              
+
               <p className="text-lg text-gray-600 mb-8 mt-5">
-              Bhoomatha's journey is built on a foundation of trust, innovation, and excellence. With each milestone, we continue to transform visions into reality, creating impactful projects that inspire growth and long-term success.
+                Bhoomatha's journey is built on a foundation of trust, innovation, and excellence. With each milestone, we continue to transform visions into reality, creating impactful projects that inspire growth and long-term success.
               </p>
             </div>
           </div>
@@ -131,21 +172,21 @@ const ServicesSection = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              
+
               {/* Content Section */}
               <div className="p-8 md:p-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                   What Makes Bhoomatha Unique
                 </h2>
-                
+
                 <p className="text-lg text-gray-600 mb-6">
                   At Bhoomatha Group, we don't just build properties—we create investment opportunities that promise high appreciation, secure ownership, and long-term value. Our commitment to trust, transparency, and excellence has made us a leading real estate developer in South India.
                 </p>
-                
+
                 <p className="text-lg text-gray-600 mb-8">
                   With thousands of happy customers and investors, we take pride in being one of the most trusted real estate brands, delivering high-quality, affordable, and future-ready projects.
                 </p>
-                
+
                 <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg">
                   Explore Our Projects
                 </Button>
@@ -154,32 +195,48 @@ const ServicesSection = () => {
           </div>
 
 
-          <div className="grid md:grid-cols-2 gap-8 mt-16">
-          <div className="bg-gradient-primary text-primary-foreground p-8 rounded-2xl">
-            <h3 className="text-2xl font-bold mb-4 font-heading">Our Mission</h3>
-            <p className="text-primary-foreground/90">
-            Our mission is to develop legally approved, strategically located properties that deliver high value and sustainable communities, combining quality, transparency, and long-term growth for homeowners and investors.
-            </p>
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-6 md:gap-8 mt-16 items-stretch">
+            {/* Vision card - first */}
+            <div className="bg-white text-gray-900 p-6 md:p-8 rounded-2xl border border-green-100 shadow-sm hover:shadow-md transition-shadow h-full">
+              <div className="flex items-start gap-4">
+                <div className="shrink-0 rounded-full bg-green-50 text-green-600 p-3">
+                  <VisionIcon className="h-12 w-12" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold font-heading mb-1">Our Vision</h3>
+                  <p className="text-gray-700">
+                  To lead in real estate by delivering high-value, sustainable, and legally secure properties. We create investment opportunities with premium infrastructure, long-term appreciation, and trusted, transparent business practices
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Mission card - second */}
+            <div className="bg-white text-gray-900 p-6 md:p-8 rounded-2xl border border-green-100 shadow-sm hover:shadow-md transition-shadow h-full">
+              <div className="flex items-start gap-4">
+                <div className="shrink-0 rounded-full bg-green-50 text-green-600 p-3">
+                  <MissionIcon className="h-12 w-12" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold font-heading mb-1">Our Mission</h3>
+                  <p className="text-gray-700">
+                  Our mission is to develop legally approved, strategically located properties that deliver high value and sustainable communities, combining quality, transparency, and long-term growth for homeowners and investors.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-          
-          <div className="bg-gradient-to-br from-green-600 to-green-800 text-white p-8 rounded-2xl">
-            <h3 className="text-2xl font-bold mb-4 font-heading">Our Vision</h3>
-            <p className="text-white/90">
-            To lead in real estate by delivering high-value, sustainable, and legally secure properties. We create investment opportunities with premium infrastructure, long-term appreciation, and trusted, transparent business practices.
-            </p>
-          </div>
+
+
+
+
+
         </div>
 
-
-
-
-
-        </div>
-
-        <VideoModal 
-          isOpen={isVideoOpen} 
-          onClose={() => setIsVideoOpen(false)} 
-          videoId={videoId} 
+        <VideoModal
+          isOpen={isVideoOpen}
+          onClose={() => setIsVideoOpen(false)}
+          videoId={videoId}
         />
       </div>
     </section>
