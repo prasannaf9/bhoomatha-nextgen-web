@@ -31,7 +31,8 @@ const HeroSection = () => {
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 font-heading leading-tight">
         The Boomatha Growth Story
 
-              <span className="block text-secondary">Happy Home</span>
+              <span className="block text-secondary">Legacy Of Trust Future of Scale                
+              </span>
             </h1>
             
             <p className="text-xl text-white/90 mb-8 font-body">

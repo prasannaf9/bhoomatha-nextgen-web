@@ -13,7 +13,7 @@ const ProjectsSection = () => {
   const projects = [
     {
       id: 1,
-      title: "Purna Sai Township",
+      title: "Bhoomatha's SVN Swapnalok",
       category: "residential",
       location: "Maddi Village",
       image: residentialImg,
