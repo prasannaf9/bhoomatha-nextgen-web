@@ -74,7 +74,7 @@ export function BookingForm({ isOpen, onClose }: BookingFormProps) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
-      <div className="relative w-full max-w-md rounded-lg bg-background p-6 shadow-xl">
+      <div className="relative w-full max-w-2xl rounded-lg bg-background p-8 shadow-xl">
         <button
           onClick={onClose}
           className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
@@ -116,48 +116,25 @@ export function BookingForm({ isOpen, onClose }: BookingFormProps) {
                   required
                 />
               </div>
-              <div className="space-y-2 w-full">
-                <Label>Select Project Type</Label>
-                <div className="space-y-3 w-full">
-                  {projectTypes.map((project) => (
+              <div className="space-y-4">
+                <h3 className="text-sm font-medium">Project Type</h3>
+                <div className="grid grid-cols-2 gap-4">
+                  {projectTypes.map((type) => (
                     <motion.div
-                      key={project.id}
-                      className={`relative p-4 w-full rounded-xl border-2 cursor-pointer transition-all duration-200 flex items-center gap-4 text-left ${
-                        selectedProject === project.id
-                          ? 'border-primary bg-primary/5'
-                          : 'border-border/50 hover:border-primary/30 hover:bg-card/50'
-                      }`}
-                      onClick={() => setSelectedProject(project.id)}
-                      whileHover={{ scale: 1.005 }}
-                      whileTap={{ scale: 0.995 }}
+                      key={type.id}
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      onClick={() => setSelectedProject(type.id)}
+                      className={`flex cursor-pointer flex-col items-center justify-center rounded-lg border-2 p-6 text-center transition-all ${selectedProject === type.id ? 'border-primary bg-primary/10' : 'border-muted-foreground/20 hover:border-primary/50'}`}
                     >
-                      <div className={`flex-shrink-0 w-14 h-14 flex items-center justify-center rounded-xl ${
-                        selectedProject === project.id
-                          ? 'bg-primary/10 text-primary'
-                          : 'bg-muted/50 text-foreground/70'
-                      }`}>
-                        <project.icon className="w-6 h-6" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <h3 className="font-medium text-base truncate">{project.title}</h3>
-                        <p className="text-sm text-muted-foreground truncate">{project.description}</p>
-                      </div>
-                      <div className={`w-5 h-5 rounded-full border-2 flex-shrink-0 ${
-                        selectedProject === project.id 
-                          ? 'border-primary bg-primary' 
-                          : 'border-muted-foreground/30'
-                      } flex items-center justify-center`}>
-                        {selectedProject === project.id && (
-                          <svg className="w-3 h-3 text-white" viewBox="0 0 24 24" fill="none">
-                            <path d="M20 6L9 17L4 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                          </svg>
-                        )}
-                      </div>
+                      <type.icon className="w-8 h-8 mb-2" />
+                      <h3 className="font-medium text-base">{type.title}</h3>
+                      <p className="text-sm text-muted-foreground">{type.description}</p>
                       <input
                         type="radio"
                         name="projectType"
-                        value={project.id}
-                        checked={selectedProject === project.id}
+                        value={type.id}
+                        checked={selectedProject === type.id}
                         className="sr-only"
                         onChange={() => {}}
                       />
