@@ -1,4 +1,4 @@
-import { Check } from "lucide-react";
+import { Check, Phone, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroBuilding from "@/assets/hero-building.jpg";
 
@@ -15,9 +15,8 @@ const reasons: { title: string; highlight?: string }[] = [
 
 const WhyBhoomathaSection = () => {
   return (
-    <section className="relative py-16 md:py-24 bg-gradient-to-b from-background to-muted/30 overflow-hidden">
-      <div className="container mx-auto px-6">
-        <h2 className="text-3xl md:text-5xl font-bold text-center md:text-left font-heading mb-10 md:mb-14">
+    <section className="relative py-16 md:py-24 bg-gradient-to-b from-background to-muted/30">
+        <h2 className="text-3xl md:text-5xl font-bold text-center font-heading mb-10 md:mb-14">
           Why Choose <span className="text-primary">Bhoomatha</span>?
         </h2>
 
@@ -70,9 +69,19 @@ const WhyBhoomathaSection = () => {
                 Quality Construction
               </div>
             </div>
+            {/* Floating CTAs */}
+            <div className="absolute bottom-4 right-4 flex gap-2">
+              <Button variant="outline" className="rounded-full px-4 h-10 bg-background/80 backdrop-blur border flex items-center gap-2">
+                <Phone className="h-4 w-4" />
+                Call Back
+              </Button>
+              <Button className="rounded-full px-4 h-10 flex items-center gap-2">
+                <MessageCircle className="h-4 w-4" />
+                WhatsApp
+              </Button>
+            </div>
           </div>
         </div>
-      </div>
     </section>
   );
 };
