@@ -18,7 +18,7 @@ const ProjectsSection = () => {
       category: "residential",
       location: "Thatipudu",
       image: Swapnalok,
-      status: "Ready to Move",
+      status: "Under Construction",
       description: "Luxury apartments with world-class amenities",
     },
     {
@@ -36,7 +36,7 @@ const ProjectsSection = () => {
       category: "mixed",
       location: "Bobbili",
       image: Sugandha,
-      status: "Launching Soon",
+      status: "Under Construction",
       description: "Retail, office, and residential complex",
     },
     {
@@ -45,7 +45,7 @@ const ProjectsSection = () => {
       category: "villa",
       location: "Dakamarri",
       image: Sindhu,
-      status: "Selling Fast",
+      status: "Under Construction",
       description: "Ultra-luxury villas with private gardens",
     },
   ];
