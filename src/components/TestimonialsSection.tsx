@@ -1,5 +1,8 @@
 import { Star, Quote } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import credaiLogo from "@/assets/credai.png";
+import reraLogo from "@/assets/rera.jpg";
+import naredcoLogo from "@/assets/naredco.png";
 
 const TestimonialsSection = () => {
   const testimonials = [
@@ -27,7 +30,21 @@ const TestimonialsSection = () => {
   ];
 
   const partners = [
-    "TechCorp", "Global Bank", "MegaRetail", "BuildPro", "EcoGreen", "UrbanDesign"
+    { 
+      name: "CREDAI", 
+      logo: credaiLogo,
+      alt: "CREDAI - Confederation of Real Estate Developers' Associations of India"
+    },
+    { 
+      name: "RERA", 
+      logo: reraLogo,
+      alt: "RERA - Real Estate Regulatory Authority"
+    },
+    { 
+      name: "NAREDCO", 
+      logo: naredcoLogo,
+      alt: "NAREDCO - National Real Estate Development Council"
+    }
   ];
 
   return (
@@ -84,15 +101,17 @@ const TestimonialsSection = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-            {partners.map((partner) => (
+          <div className="flex flex-wrap justify-center gap-8">
+            {partners.map((partner, index) => (
               <div
-                key={partner}
-                className="flex items-center justify-center p-4 bg-muted/50 rounded-xl hover:bg-muted transition-colors"
+                key={index}
+                className="flex items-center justify-center p-4 bg-white rounded-xl hover:shadow-md transition-all h-24 w-48"
               >
-                <span className="text-lg font-semibold text-muted-foreground">
-                  {partner}
-                </span>
+                <img 
+                  src={partner.logo} 
+                  alt={partner.alt}
+                  className="max-h-full max-w-full object-contain"
+                />
               </div>
             ))}
           </div>
