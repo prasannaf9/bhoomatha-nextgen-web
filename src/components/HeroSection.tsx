@@ -1,18 +1,23 @@
 import { ArrowRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-building.jpg";
+import heroVideo from "@/assets/here-video.mp4";
 
 const HeroSection = () => {
   return (
     <section id="home" className="relative min-h-[90vh] flex items-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={heroImage}
-          alt="Bhoomatha Group Premium Development"
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
           className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-hero" />
+        >
+          <source src={heroVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute inset-0 bg-black/10 bg-gradient-hero" />
       </div>
 
       {/* Content */}
@@ -24,14 +29,13 @@ const HeroSection = () => {
             </span>
             
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 font-heading leading-tight">
-              Building Dreams,
-              <span className="block text-accent">Creating Legacies</span>
+        The Boomatha Growth Story
+
+              <span className="block text-secondary">Happy Home</span>
             </h1>
             
             <p className="text-xl text-white/90 mb-8 font-body">
-              Transform your vision into reality with Bhoomatha Group's premier real estate
-              solutions. From luxury residences to commercial landmarks, we craft spaces
-              that inspire and endure.
+            With 25 years of trust and excellence, we continue to create safe and joyful communities for every family.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -52,15 +56,16 @@ const HeroSection = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 mt-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mt-12 md:mt-16">
             {[
-              { value: "500+", label: "Projects Delivered" },
-              { value: "15+", label: "Years of Excellence" },
-              { value: "10K+", label: "Happy Families" },
+              { value: "20+", label: "Our Ventures" },
+              { value: "40+", label: "Residential Apartments" },
+              { value: "10+", label: "Commercial Apartments" },
+              { value: "50+", label: "Duplex Villas" },
             ].map((stat) => (
               <div key={stat.label} className="text-white">
-                <div className="text-3xl md:text-4xl font-bold font-heading">{stat.value}</div>
-                <div className="text-sm text-white/80 mt-1">{stat.label}</div>
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold font-heading">{stat.value}</div>
+                <div className="text-xs sm:text-sm text-white/80 mt-1">{stat.label}</div>
               </div>
             ))}
           </div>

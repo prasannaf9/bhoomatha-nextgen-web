@@ -31,26 +31,24 @@ const AboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="animate-fade-in">
-            <span className="inline-block px-3 py-1 mb-4 text-sm font-semibold text-accent bg-accent/10 rounded-full">
+            <span className="inline-block px-3 py-1 mb-4 text-sm font-semibold text-primary-foreground bg-primary/60 rounded-full">
               About Bhoomatha Group
             </span>
             
             <h2 className="text-4xl md:text-5xl font-bold mb-6 font-heading">
-              Transforming Spaces,
-              <span className="text-gradient block">Enriching Lives</span>
+            Trusted Expertise, 
+              <span className="text-primary block">Sustainable Growth</span>
             </h2>
             
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              For over 15 years, Bhoomatha Group has been at the forefront of real estate
-              development, creating landmarks that define modern living. Our commitment to
-              quality, innovation, and customer satisfaction has made us a trusted name in
-              the industry.
+            Bhoomatha Real Estates & Developers Pvt Ltd
+ Established in 2005 and incorporated as a Private Limited company in 2010 with ₹6 Crores authorized capital, Bhoomatha is a leading real estate developer in Andhra Pradesh and Telangana.
             </p>
             
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              We believe in creating not just buildings, but communities where dreams flourish
-              and futures are built. Every project reflects our dedication to excellence and
-              our vision for sustainable urban development.
+            Leveraging over 25 years of expertise, we specialize in premium apartments, independent homes, and villas across Visakhapatnam, Vizianagaram, Srikakulam, Vijayawada, and Khammam. Our projects combine modern design, timely delivery, and sustainability, featuring eco-friendly Sandalwood and Teakwood plantations.
+Renowned for reliability, innovation, and creating green communities, Bhoomatha delivers enduring value for generations.
+
             </p>
 
             <Button size="lg" className="btn-primary">
@@ -66,10 +64,10 @@ const AboutSection = () => {
                 className="glass-effect p-6 rounded-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="w-12 h-12 bg-gradient-gold rounded-xl flex items-center justify-center mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+                  <feature.icon className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2 font-heading">{feature.title}</h3>
+                <h3 className="text-xl font-semibold mb-2 font-heading text-primary">{feature.title}</h3>
                 <p className="text-muted-foreground">{feature.description}</p>
               </div>
             ))}
@@ -81,16 +79,14 @@ const AboutSection = () => {
           <div className="bg-gradient-primary text-primary-foreground p-8 rounded-2xl">
             <h3 className="text-2xl font-bold mb-4 font-heading">Our Mission</h3>
             <p className="text-primary-foreground/90">
-              To create exceptional living and working spaces that enhance quality of life
-              while contributing to sustainable urban development and community growth.
+            Our mission is to develop legally approved, strategically located properties that deliver high value and sustainable communities, combining quality, transparency, and long-term growth for homeowners and investors.
             </p>
           </div>
           
-          <div className="bg-gradient-gold text-white p-8 rounded-2xl">
+          <div className="bg-gradient-to-br from-green-600 to-green-800 text-white p-8 rounded-2xl">
             <h3 className="text-2xl font-bold mb-4 font-heading">Our Vision</h3>
             <p className="text-white/90">
-              To be the most trusted and innovative real estate developer, setting new
-              benchmarks in design, quality, and customer satisfaction across the nation.
+            To lead in real estate by delivering high-value, sustainable, and legally secure properties. We create investment opportunities with premium infrastructure, long-term appreciation, and trusted, transparent business practices.
             </p>
           </div>
         </div>

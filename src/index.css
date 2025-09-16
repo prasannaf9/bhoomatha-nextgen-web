@@ -148,7 +148,7 @@ All colors MUST be HSL.
   
   /* Text gradient */
   .text-gradient {
-    background: var(--gradient-gold);
+    background: linear-gradient(90deg, #16a34a, #166534);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

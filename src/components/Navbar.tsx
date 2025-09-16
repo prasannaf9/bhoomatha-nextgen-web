@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, Search, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/logo.webp";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,11 +18,11 @@ const Navbar = () => {
 
   const navLinks = [
     { label: "Home", href: "#home" },
-    { label: "About Us", href: "#about" },
-    { label: "Projects", href: "#projects" },
-    { label: "Services", href: "#services" },
-    { label: "Careers", href: "#careers" },
-    { label: "Contact", href: "#contact" },
+    { label: "About Us", href: "#" },
+    { label: "Projects", href: "#" },
+    { label: "Resorts", href: "#" },
+    { label: "NRIs", href: "#" },
+    { label: "Contact Us", href: "#" },
   ];
 
   return (
@@ -32,16 +33,17 @@ const Navbar = () => {
           <div className="flex items-center gap-6">
             <a href="tel:+1234567890" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
               <Phone className="h-3 w-3" />
-              +1 (234) 567-890
+              +91 7799753333
             </a>
-            <a href="mailto:info@bhoomathagroup.com" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-              <Mail className="h-3 w-3" />
-              info@bhoomathagroup.com
-            </a>
+           
           </div>
           <div className="flex items-center gap-4">
-            <Button variant="ghost" size="sm" className="text-primary-foreground hover:text-primary-foreground/80">
-              Partner Portal
+            <Button 
+              variant="outline" 
+              size="sm" 
+              className="text-primary-foreground border-primary-foreground hover:border-primary-foreground/80 hover:text-primary-foreground/80 transition-all bg-transparent hover:bg-transparent"
+            >
+              Site visit
             </Button>
           </div>
         </div>
@@ -60,10 +62,13 @@ const Navbar = () => {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center">
-              <h1 className="text-2xl font-bold font-heading">
-                <span className="text-primary">Bhoomatha</span>
-                <span className="text-accent ml-1">Group</span>
-              </h1>
+              <a href="#" className="h-20 w-auto">
+                <img 
+                  src={logo} 
+                  alt="Bhoomatha Group Logo" 
+                  className="h-full w-auto object-contain"
+                />
+              </a>
             </div>
 
             {/* Desktop Navigation */}
@@ -81,11 +86,9 @@ const Navbar = () => {
 
             {/* Desktop Actions */}
             <div className="hidden lg:flex items-center gap-4">
-              <Button variant="ghost" size="icon" className="hover:bg-primary/10">
-                <Search className="h-5 w-5" />
-              </Button>
+              
               <Button className="btn-hero">
-                Get Quote
+              Book Now
               </Button>
             </div>
 
