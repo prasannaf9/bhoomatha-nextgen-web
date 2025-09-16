@@ -1,36 +1,36 @@
 import { MapPin, Phone, Mail, Facebook, Twitter, Linkedin, Instagram, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import f9Logo from "@/assets/f9-logo.svg";
 
 const Footer = () => {
   const quickLinks = [
-    { label: "About Us", href: "#about" },
-    { label: "Projects", href: "#projects" },
-    { label: "Services", href: "#services" },
-    { label: "Careers", href: "#careers" },
-    { label: "Contact", href: "#contact" },
+    { label: "Privacy Policy" },
+    { label: "Terms of Service" },
+    { label: "Cookie Policy" },
+    { label: "Sitemap" },
   ];
 
   const projects = [
-    { label: "Bhoomatha Heights", href: "#" },
-    { label: "Corporate Plaza", href: "#" },
-    { label: "Villa Paradise", href: "#" },
-    { label: "Bhoomatha Square", href: "#" },
+    { label: "Bhoomatha Heights" },
+    { label: "Corporate Plaza" },
+    { label: "Villa Paradise" },
+    { label: "Bhoomatha Square" },
   ];
 
   const legal = [
-    { label: "Privacy Policy", href: "#" },
-    { label: "Terms of Service", href: "#" },
-    { label: "Cookie Policy", href: "#" },
-    { label: "Sitemap", href: "#" },
+    { label: "Privacy Policy" },
+    { label: "Terms of Service" },
+    { label: "Cookie Policy" },
+    { label: "Sitemap" },
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Youtube, href: "#", label: "YouTube" },
+    { icon: Facebook, label: "Facebook" },
+    { icon: Twitter, label: "Twitter" },
+    { icon: Linkedin, label: "LinkedIn" },
+    { icon: Instagram, label: "Instagram" },
+    { icon: Youtube, label: "YouTube" },
   ];
 
   return (
@@ -65,16 +65,11 @@ const Footer = () => {
             </div>
 
             {/* Social Links */}
-            <div className="flex gap-3">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  aria-label={social.label}
-                  className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"
-                >
-                  <social.icon className="h-5 w-5" />
-                </a>
+            <div className="flex space-x-4">
+              {socialLinks.map((social, index) => (
+                <span key={index} className="text-primary-foreground/60">
+                  <social.icon className="w-5 h-5" />
+                </span>
               ))}
             </div>
           </div>
@@ -83,14 +78,9 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              {quickLinks.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-primary-foreground/80 hover:text-accent transition-colors"
-                  >
-                    {link.label}
-                  </a>
+              {quickLinks.map((link, index) => (
+                <li key={index} className="text-primary-foreground/80">
+                  {link.label}
                 </li>
               ))}
             </ul>
@@ -100,14 +90,9 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Our Projects</h4>
             <ul className="space-y-2">
-              {projects.map((project) => (
-                <li key={project.label}>
-                  <a
-                    href={project.href}
-                    className="text-primary-foreground/80 hover:text-accent transition-colors"
-                  >
-                    {project.label}
-                  </a>
+              {projects.map((project, index) => (
+                <li key={index} className="text-primary-foreground/80">
+                  {project.label}
                 </li>
               ))}
             </ul>
@@ -124,23 +109,13 @@ const Footer = () => {
                   Bangalore 560066, India
                 </span>
               </li>
-              <li>
-                <a
-                  href="tel:+1234567890"
-                  className="flex items-center gap-2 text-primary-foreground/80 hover:text-accent transition-colors"
-                >
-                  <Phone className="h-5 w-5" />
-                  +1 (234) 567-890
-                </a>
+              <li className="flex items-center gap-2 text-primary-foreground/80">
+                <Phone className="h-5 w-5 flex-shrink-0" />
+                +1 (234) 567-890
               </li>
-              <li>
-                <a
-                  href="mailto:info@bhoomathagroup.com"
-                  className="flex items-center gap-2 text-primary-foreground/80 hover:text-accent transition-colors"
-                >
-                  <Mail className="h-5 w-5" />
-                  info@bhoomathagroup.com
-                </a>
+              <li className="flex items-center gap-2 text-primary-foreground/80">
+                <Mail className="h-5 w-5 flex-shrink-0" />
+                info@bhoomathagroup.com
               </li>
             </ul>
           </div>
@@ -154,16 +129,13 @@ const Footer = () => {
             <p className="text-sm text-primary-foreground/80">
               © 2024 Bhoomatha Group. All rights reserved.
             </p>
-            <div className="flex gap-6">
-              {legal.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="text-sm text-primary-foreground/80 hover:text-accent transition-colors"
-                >
-                  {item.label}
-                </a>
-              ))}
+            <div className="flex items-center gap-2 text-sm text-primary-foreground/80">
+              <span>Designed by</span>
+              <img 
+                src={f9Logo}
+                alt="f9tech" 
+                className="h-5 w-auto"
+              />
             </div>
           </div>
         </div>
