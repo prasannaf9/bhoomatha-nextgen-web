@@ -1,75 +1,95 @@
-import { Home, Building, Briefcase, Palette, TreePine, Shield } from "lucide-react";
+import { Building, Building2, LandPlot, Hotel, Home as HomeIcon, Briefcase, Home, BuildingIcon, Factory } from "lucide-react";
+import { motion } from "framer-motion";
 
 const ServicesSection = () => {
-  const services = [
+  const categories = [
     {
       icon: Home,
-      title: "Residential Development",
-      description: "Creating modern homes with premium amenities and sustainable design for contemporary families.",
+      title: "Residential",
+      description: "Luxury Apartments"
     },
     {
-      icon: Building,
-      title: "Commercial Spaces",
-      description: "Developing state-of-the-art office complexes and retail spaces for businesses to thrive.",
+      icon: BuildingIcon,
+      title: "Townships",
+      description: "Planned Communities"
     },
     {
       icon: Briefcase,
-      title: "Property Management",
-      description: "Professional management services ensuring your investment remains valuable and well-maintained.",
+      title: "Ventures",
+      description: "Joint Developments"
     },
     {
-      icon: Palette,
-      title: "Interior Design",
-      description: "Transforming spaces with innovative design solutions that reflect your style and needs.",
+      icon: Building2,
+      title: "Commercial",
+      description: "Office & Retail"
     },
     {
-      icon: TreePine,
-      title: "Sustainable Development",
-      description: "Eco-friendly construction practices and green building certifications for a better tomorrow.",
-    },
-    {
-      icon: Shield,
-      title: "Investment Advisory",
-      description: "Expert guidance on real estate investments to maximize returns and minimize risks.",
-    },
+      icon: Factory,
+      title: "Industrial",
+      description: "Estate & Parks"
+    }
   ];
 
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.1,
+        duration: 0.5
+      }
+    })
+  };
+
   return (
-    <section id="services" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-6">
+    <section id="services" className="py-20 bg-gradient-to-b from-background to-muted/30">
+      <div className="container mx-auto px-4 sm:px-6">
         {/* Header */}
-        <div className="text-center mb-12">
-          <span className="inline-block px-3 py-1 mb-4 text-sm font-semibold text-accent bg-accent/10 rounded-full">
-            What We Do
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-heading">
-            Our Services
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive real estate solutions tailored to meet your unique requirements
-          </p>
+        <div className="text-center mb-16">
+          <motion.h2 
+            className="text-4xl md:text-5xl font-bold mb-6 font-heading text-foreground"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <span className="block">Find Your Perfect</span>
+            <span className="text-primary">Property Type</span>
+          </motion.h2>
+          <motion.p 
+            className="text-lg text-muted-foreground max-w-2xl mx-auto"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+          >
+            Thousands of luxury home enthusiasts just like you have found their dream home
+          </motion.p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={service.title}
-              className="group bg-card p-8 rounded-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-border/50 hover:border-primary/20 animate-fade-in"
-              style={{ animationDelay: `${index * 100}ms` }}
+        {/* Categories Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 px-4">
+          {categories.map((category, index) => (
+            <motion.div
+              key={category.title}
+              className="group relative bg-card p-4 rounded-xl border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col items-center"
+              custom={index}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={itemVariants}
+              whileHover={{ y: -5 }}
             >
-              <div className="w-14 h-14 bg-gradient-primary rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <service.icon className="h-7 w-7 text-primary-foreground" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="relative z-10 text-center flex flex-col items-center">
+                <div className="w-24 h-24 flex items-center justify-center mb-4 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                  <category.icon className="w-12 h-12" />
+                </div>
+                <h3 className="text-lg font-bold text-foreground">{category.title}</h3>
+                <p className="text-sm text-muted-foreground mt-1">{category.description}</p>
               </div>
-              
-              <h3 className="text-xl font-bold mb-3 font-heading group-hover:text-primary transition-colors">
-                {service.title}
-              </h3>
-              
-              <p className="text-muted-foreground leading-relaxed">
-                {service.description}
-              </p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

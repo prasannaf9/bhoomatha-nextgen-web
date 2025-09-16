@@ -17,7 +17,7 @@ const HeroSection = () => {
           <source src={heroVideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <div className="absolute inset-0 bg-black/10 bg-gradient-hero" />
+        <div className="absolute inset-0 bg-black/20 bg-gradient-hero" />
       </div>
 
       {/* Content */}
@@ -31,12 +31,12 @@ const HeroSection = () => {
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 font-heading leading-tight">
         The Boomatha Growth Story
 
-              <span className="block text-secondary">Legacy Of Trust Future of Scale                
+              <span className="block text-secondary">Legacy of Trust Future of Scale                
               </span>
             </h1>
             
             <p className="text-xl text-white/90 mb-8 font-body">
-            With 25 years of trust and excellence, we continue to create safe and joyful communities for every family.
+            Bhoomatha stands as a symbol of vision and reliability in Andhra’s real estate landscape. With a legacy of trust and a future shaped by bold townships and transformative communities, we are redefining growth corridors and creating enduring value for investors, partners, and generations to come.
             </p>
 
             <div className="flex flex-wrap gap-4">
