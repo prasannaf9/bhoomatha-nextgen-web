@@ -31,7 +31,7 @@ const AboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="animate-fade-in">
-            <span className="inline-block px-3 py-1 mb-4 text-sm font-semibold text-primary-foreground bg-primary/60 rounded-full">
+            <span className="inline-block px-4 py-2 mb-6 text-xl font-semibold text-primary-foreground bg-primary/60 backdrop-blur-sm rounded-full font-cursive italic tracking-wider">
               About Bhoomatha Group
             </span>
             

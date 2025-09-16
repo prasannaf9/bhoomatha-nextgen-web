@@ -20,14 +20,23 @@ const WhyBhoomathaSection = () => {
           Why Choose <span className="text-primary">Bhoomatha</span>?
         </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-          {/* Left: Reasons */}
-          <div className="lg:col-span-8 xl:col-span-8">
-            <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 items-stretch">
+          {/* Left: Image - Full height on large screens */}
+          <div className="lg:w-1/3 h-[500px] lg:h-auto">
+            <img 
+              src={heroBuilding} 
+              alt="Bhoomatha Properties" 
+              className="w-full h-full object-cover rounded-2xl shadow-lg"
+            />
+          </div>
+          
+          {/* Right: Reasons - Scrollable container */}
+          <div className="lg:w-2/3">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 h-full">
               {reasons.map((item, i) => (
                 <div
                   key={i}
-                  className="flex items-start gap-3 rounded-xl border bg-card/60 backdrop-blur-sm p-4 hover:shadow-md transition-all"
+                  className="flex items-start gap-3 rounded-xl border bg-card/60 backdrop-blur-sm p-4 hover:shadow-md transition-all h-full"
                 >
                   <div className="mt-0.5 flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary">
                     <Check className="h-4 w-4" />

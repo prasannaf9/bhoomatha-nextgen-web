@@ -68,9 +68,9 @@ const ProjectsSection = () => {
         {/* Header */}
         <div className="text-center mb-12">
 
-        <span className="inline-block px-3 py-1 mb-4 text-sm font-semibold text-primary-foreground bg-primary/60 rounded-full">
-        Our Projects
-            </span>
+        <span className="inline-block px-4 py-2 mb-6 text-xl font-semibold text-primary-foreground bg-primary/60 backdrop-blur-sm rounded-full font-cursive italic tracking-wider">
+          Our Projects
+        </span>
 
           <h2 className="text-4xl md:text-5xl font-bold mb-4 font-heading">
             Featured Developments

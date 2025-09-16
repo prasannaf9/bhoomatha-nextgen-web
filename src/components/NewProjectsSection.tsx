@@ -13,6 +13,21 @@ const NewProjectsSection = () => {
   const projects = [
     {
       id: 1,
+      title: "Svn Swapnlok",
+      category: "residential",
+      location: "Anadapuram",
+      image: Swapnalok,
+      status: "Under Construction",
+      acres: 200,
+      description: "Luxury apartments with world-class amenities",
+      highlights: [
+        "Premium gated community",
+        "Modern architecture",
+        "24/7 security"
+      ]
+    },
+    {
+      id: 2,
       title: "Anadapuram Venture",
       category: "residential",
       location: "Anadapuram",
@@ -27,7 +42,7 @@ const NewProjectsSection = () => {
       ]
     },
     {
-      id: 2,
+      id: 3,
       title: "Boyapalem Construction",
       category: "commercial",
       location: "Boyapalem",
@@ -42,7 +57,7 @@ const NewProjectsSection = () => {
       ]
     },
     {
-      id: 3,
+      id: 4,
       title: "Housing Project",
       category: "mixed",
       location: "Kadiri",
@@ -70,7 +85,7 @@ const NewProjectsSection = () => {
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-12">
-          <span className="inline-block px-3 py-1 mb-4 text-sm font-semibold text-primary-foreground bg-primary/60 rounded-full">
+          <span className="inline-block px-4 py-2 mb-6 text-xl font-semibold text-primary-foreground bg-primary/60 backdrop-blur-sm rounded-full font-cursive italic tracking-wider">
             New Launches
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 font-heading">
@@ -84,48 +99,37 @@ const NewProjectsSection = () => {
         {/* Category Filter */}
 
         {/* Projects Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {filteredProjects.map((project) => (
             <div
               key={project.id}
               className="group bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
               {/* Acres Header */}
-              <div className="relative bg-primary p-6">
-                <div className="flex items-start justify-between">
-                  <div className="flex items-center">
-                    <span className="text-5xl font-bold text-white">{project.acres}</span>
-                  </div>
-                  <div className="text-right">
-                    <p className="text-sm text-white/90 uppercase tracking-wider">Total Area</p>
-                    <p className="text-white/80">Acres</p>
-                  </div>
+              <div className="relative bg-primary p-4">
+                <div className="flex items-center">
+                  <span className="text-6xl md:text-7xl font-bold text-white leading-none">{project.acres}</span>
+                  <span className="text-2xl font-bold text-white ml-1">ACRES</span>
                 </div>
               </div>
 
               {/* Content Section */}
-              <div className="p-6">
-                <h3 className="text-2xl font-bold mb-2 font-heading group-hover:text-primary transition-colors">
-                  {project.title}
-                </h3>
-                <div className="flex items-center gap-2 mb-4 text-muted-foreground">
-                  <MapPin className="h-4 w-4 flex-shrink-0" />
-                  <span className="truncate">{project.location}</span>
+              <div className="p-4 flex flex-col h-[200px]">
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold mb-1 font-heading group-hover:text-primary transition-colors">
+                    {project.title}
+                  </h3>
+                  <div className="flex items-center gap-1 mb-2 text-muted-foreground">
+                    <MapPin className="h-3 w-3 flex-shrink-0" />
+                    <span className="text-xs">{project.location}</span>
+                  </div>
+                  <p className="text-xs text-muted-foreground">
+                    {project.description}
+                  </p>
                 </div>
-                <p className="text-muted-foreground mb-4">
-                  {project.description}
-                </p>
-                <div className="space-y-2 mb-6">
-                  {project.highlights.map((highlight, i) => (
-                    <div key={i} className="flex items-start gap-2">
-                      <Check className="h-4 w-4 mt-0.5 text-primary flex-shrink-0" />
-                      <span className="text-sm">{highlight}</span>
-                    </div>
-                  ))}
-                </div>
-                <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                  View Project Details
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <Button variant="outline" className="w-full h-10 mt-auto group-hover:bg-primary group-hover:text-primary-foreground transition-colors flex items-center justify-center">
+                  <span className="truncate">View Project Details</span>
+                  <ArrowRight className="ml-2 h-4 w-4 flex-shrink-0 transition-transform group-hover:translate-x-1" />
                 </Button>
               </div>
             </div>
