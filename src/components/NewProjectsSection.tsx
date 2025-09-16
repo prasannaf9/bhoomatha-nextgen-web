@@ -91,16 +91,14 @@ const NewProjectsSection = () => {
               className="group bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
               {/* Acres Header */}
-              <div className="relative bg-gradient-to-r from-primary/15 via-primary/10 to-transparent p-6">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-primary/15 text-primary flex items-center justify-center">
-                      <Ruler className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <p className="text-xs uppercase tracking-wide text-muted-foreground">Total Area</p>
-                      <p className="text-2xl font-extrabold">{project.acres} Acres</p>
-                    </div>
+              <div className="relative bg-primary p-6">
+                <div className="flex items-start justify-between">
+                  <div className="flex items-center">
+                    <span className="text-5xl font-bold text-white">{project.acres}</span>
+                  </div>
+                  <div className="text-right">
+                    <p className="text-sm text-white/90 uppercase tracking-wider">Total Area</p>
+                    <p className="text-white/80">Acres</p>
                   </div>
                 </div>
               </div>
