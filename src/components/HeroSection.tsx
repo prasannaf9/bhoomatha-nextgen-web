@@ -24,8 +24,8 @@ const HeroSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-3xl">
           <div className="animate-fade-in">
-            <span className="inline-block px-4 py-2 mb-6 text-5xl font-semibold text-primary-foreground  rounded-full font-cursive italic tracking-wider">
-              Andhra Pradesh
+            <span className="inline-block px-4 py-2 mb-6 text-sm font-semibold text-primary-foreground rounded-full">
+              Andhra pradesh
             </span>
             
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 font-heading leading-tight">

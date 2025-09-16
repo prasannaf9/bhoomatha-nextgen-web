@@ -160,7 +160,6 @@ const ServicesSection = () => {
           </div>
         </div>
 
-        {/* What Makes Bhoomatha Unique Section */}
         <div className="mt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
             <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -195,12 +194,11 @@ const ServicesSection = () => {
           </div>
 
 
-          <div className="grid grid-cols-1 md:grid-cols-1 gap-6 md:gap-8 mt-16 items-stretch">
-            {/* Vision card - first */}
+          <div className="grid grid-cols-2 md:grid-cols-2 gap-6 md:gap-8 mt-16 items-stretch">
             <div className="bg-white text-gray-900 p-6 md:p-8 rounded-2xl border border-green-100 shadow-sm hover:shadow-md transition-shadow h-full">
               <div className="flex items-start gap-4">
                 <div className="shrink-0 rounded-full bg-green-50 text-green-600 p-3">
-                  <VisionIcon className="h-12 w-12" />
+                  <VisionIcon className="h-20 w-20" />
                 </div>
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold font-heading mb-1">Our Vision</h3>
@@ -211,11 +209,10 @@ const ServicesSection = () => {
               </div>
             </div>
 
-            {/* Mission card - second */}
             <div className="bg-white text-gray-900 p-6 md:p-8 rounded-2xl border border-green-100 shadow-sm hover:shadow-md transition-shadow h-full">
               <div className="flex items-start gap-4">
                 <div className="shrink-0 rounded-full bg-green-50 text-green-600 p-3">
-                  <MissionIcon className="h-12 w-12" />
+                  <MissionIcon className="h-20 w-20" />
                 </div>
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold font-heading mb-1">Our Mission</h3>
