@@ -1,15 +1,9 @@
-import { X, CheckCircle } from "lucide-react";
+import { X, CheckCircle, Home, BuildingIcon, Briefcase, Building2, Factory } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "./ui/select";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 interface BookingFormProps {
   isOpen: boolean;
@@ -18,6 +12,34 @@ interface BookingFormProps {
 
 export function BookingForm({ isOpen, onClose }: BookingFormProps) {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [selectedProject, setSelectedProject] = useState<string | null>(null);
+
+  const projectTypes = [
+    {
+      id: "residential",
+      icon: Home,
+      title: "Residential",
+      description: "Luxury Apartments"
+    },
+    {
+      id: "township",
+      icon: BuildingIcon,
+      title: "Townships",
+      description: "Planned Communities"
+    },
+    {
+      id: "commercial",
+      icon: Building2,
+      title: "Commercial",
+      description: "Office & Retail"
+    },
+    {
+      id: "industrial",
+      icon: Factory,
+      title: "Villas",
+      description: "Estate & Parks"
+    }
+  ];
   
   if (!isOpen) return null;
 
@@ -73,41 +95,78 @@ export function BookingForm({ isOpen, onClose }: BookingFormProps) {
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div className="space-y-2">
                 <Label htmlFor="name">Full Name</Label>
-                <Input id="name" placeholder="John Doe" required />
+                <Input id="name" required />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="email">Email</Label>
                 <Input
                   id="email"
                   type="email"
-                  placeholder="john@example.com"
                   required
                 />
               </div>
             </div>
 
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-1">
               <div className="space-y-2">
                 <Label htmlFor="phone">Phone Number</Label>
                 <Input
                   id="phone"
                   type="tel"
-                  placeholder="+91 9876543210"
                   required
                 />
               </div>
-              <div className="space-y-2">
-                <Label htmlFor="project">Project Interest</Label>
-                <Select>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Select project" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="project1">Project 1</SelectItem>
-                    <SelectItem value="project2">Project 2</SelectItem>
-                    <SelectItem value="project3">Project 3</SelectItem>
-                  </SelectContent>
-                </Select>
+              <div className="space-y-2 w-full">
+                <Label>Select Project Type</Label>
+                <div className="space-y-3 w-full">
+                  {projectTypes.map((project) => (
+                    <motion.div
+                      key={project.id}
+                      className={`relative p-4 w-full rounded-xl border-2 cursor-pointer transition-all duration-200 flex items-center gap-4 text-left ${
+                        selectedProject === project.id
+                          ? 'border-primary bg-primary/5'
+                          : 'border-border/50 hover:border-primary/30 hover:bg-card/50'
+                      }`}
+                      onClick={() => setSelectedProject(project.id)}
+                      whileHover={{ scale: 1.005 }}
+                      whileTap={{ scale: 0.995 }}
+                    >
+                      <div className={`flex-shrink-0 w-14 h-14 flex items-center justify-center rounded-xl ${
+                        selectedProject === project.id
+                          ? 'bg-primary/10 text-primary'
+                          : 'bg-muted/50 text-foreground/70'
+                      }`}>
+                        <project.icon className="w-6 h-6" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="font-medium text-base truncate">{project.title}</h3>
+                        <p className="text-sm text-muted-foreground truncate">{project.description}</p>
+                      </div>
+                      <div className={`w-5 h-5 rounded-full border-2 flex-shrink-0 ${
+                        selectedProject === project.id 
+                          ? 'border-primary bg-primary' 
+                          : 'border-muted-foreground/30'
+                      } flex items-center justify-center`}>
+                        {selectedProject === project.id && (
+                          <svg className="w-3 h-3 text-white" viewBox="0 0 24 24" fill="none">
+                            <path d="M20 6L9 17L4 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        )}
+                      </div>
+                      <input
+                        type="radio"
+                        name="projectType"
+                        value={project.id}
+                        checked={selectedProject === project.id}
+                        className="sr-only"
+                        onChange={() => {}}
+                      />
+                    </motion.div>
+                  ))}
+                </div>
+                {!selectedProject && (
+                  <p className="text-sm text-destructive mt-1">Please select a project type</p>
+                )}
               </div>
             </div>
 
@@ -122,7 +181,11 @@ export function BookingForm({ isOpen, onClose }: BookingFormProps) {
             </div>
 
             <div className="pt-2">
-              <Button type="submit" className="w-full">
+              <Button 
+                type="submit" 
+                className="w-full"
+                disabled={!selectedProject}
+              >
                 Submit Request
               </Button>
             </div>
