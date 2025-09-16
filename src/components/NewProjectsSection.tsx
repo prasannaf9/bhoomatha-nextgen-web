@@ -106,8 +106,12 @@ const NewProjectsSection = () => {
               className="group bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
               {/* Acres Header */}
-              <div className="relative bg-primary p-4">
-                <div className="flex items-center">
+              <div className="relative px-5 py-14 bg-primary overflow-hidden">
+                <div className="absolute inset-0" style={{
+                  backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.1) 35px, rgba(255,255,255,.1) 70px)`,
+                  opacity: 0.2
+                }} />
+                <div className="relative z-10 flex items-center">
                   <span className="text-6xl md:text-7xl font-bold text-white leading-none">{project.acres}</span>
                   <span className="text-2xl font-bold text-white ml-1">ACRES</span>
                 </div>
