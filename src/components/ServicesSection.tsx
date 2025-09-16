@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { VideoModal } from "./VideoModal";
 import videoThumbnail from "@/assets/video-image.png";
-import whyImage from "@/assets/why.webp";
+import whyImage from "@/assets/BHOOM.png";
 import { Button } from "./ui/button";
 
 const ServicesSection = () => {

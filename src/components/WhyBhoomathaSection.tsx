@@ -15,15 +15,15 @@ const reasons: { title: string; highlight?: string }[] = [
 
 const WhyBhoomathaSection = () => {
   return (
-    <section className="relative py-16 md:py-24 bg-gradient-to-b from-background to-muted/30">
+    <section className="relative py-16 md:py-24 bg-gradient-to-b from-background to-muted/30 px-4">
         <h2 className="text-3xl md:text-5xl font-bold text-center font-heading mb-10 md:mb-14">
           Why Choose <span className="text-primary">Bhoomatha</span>?
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           {/* Left: Reasons */}
-          <div className="lg:col-span-6 xl:col-span-5">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="lg:col-span-8 xl:col-span-8">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
               {reasons.map((item, i) => (
                 <div
                   key={i}
@@ -54,32 +54,14 @@ const WhyBhoomathaSection = () => {
           </div>
 
           {/* Right: Image */}
-          <div className="lg:col-span-6 xl:col-span-7 relative min-h-[320px] md:min-h-[460px] rounded-2xl overflow-hidden border">
+          <div className="lg:col-span-4 xl:col-span-4 relative min-h-[320px] md:min-h-[460px] rounded-2xl overflow-hidden border">
             <div
               className="absolute inset-0 bg-cover bg-center"
               style={{ backgroundImage: `url(${heroBuilding})` }}
             />
-            <div className="absolute inset-0 bg-gradient-to-l from-background/60 via-background/20 to-transparent" />
-            {/* Optional bottom info bar */}
-            <div className="absolute bottom-4 left-4 right-4 flex flex-wrap gap-2 justify-end">
-              <div className="rounded-full bg-background/80 backdrop-blur px-4 py-2 text-sm border">
-                Premium Locations
-              </div>
-              <div className="rounded-full bg-background/80 backdrop-blur px-4 py-2 text-sm border">
-                Quality Construction
-              </div>
-            </div>
+            
             {/* Floating CTAs */}
-            <div className="absolute bottom-4 right-4 flex gap-2">
-              <Button variant="outline" className="rounded-full px-4 h-10 bg-background/80 backdrop-blur border flex items-center gap-2">
-                <Phone className="h-4 w-4" />
-                Call Back
-              </Button>
-              <Button className="rounded-full px-4 h-10 flex items-center gap-2">
-                <MessageCircle className="h-4 w-4" />
-                WhatsApp
-              </Button>
-            </div>
+            
           </div>
         </div>
     </section>
