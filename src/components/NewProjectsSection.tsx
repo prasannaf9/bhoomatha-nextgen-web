@@ -85,13 +85,11 @@ const NewProjectsSection = () => {
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-12">
-          <span className="inline-block px-4 py-2 mb-6 text-xl font-semibold text-primary-foreground bg-primary/60 backdrop-blur-sm rounded-full font-cursive italic tracking-wider">
-            New Launches
-          </span>
+         
           <h2 className="text-4xl md:text-5xl font-bold mb-4 font-heading">
             Upcoming Developments
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-1xl mx-auto">
             Explore our upcoming projects with premium amenities and strategic locations
           </p>
         </div>
@@ -111,19 +109,21 @@ const NewProjectsSection = () => {
                   backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.1) 35px, rgba(255,255,255,.1) 70px)`,
                   opacity: 0.2
                 }} />
-                <div className="relative z-10 flex items-center">
-                  <span className="text-6xl md:text-7xl font-bold text-white leading-none">{project.acres}</span>
-                  <span className="text-2xl font-bold text-white ml-1">ACRES</span>
-                </div>
+            
+                  <div className="text-7xl md:text-9xl font-bold text-white leading-none text-center">{project.acres}</div>
+                
+          
+<p className="text-2xl font-bold text-white ml-1 text-center">ACRES</p>
+
               </div>
 
               {/* Content Section */}
-              <div className="p-4 flex flex-col h-[200px]">
+              <div className="p-4 flex flex-col h-[200px] text-center">
                 <div className="flex-1">
                   <h3 className="text-xl font-bold mb-1 font-heading group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
-                  <div className="flex items-center gap-1 mb-2 text-muted-foreground">
+                  <div className="flex items-center gap-1 mb-2 text-muted-foreground justify-content-center text-center">
                     <MapPin className="h-3 w-3 flex-shrink-0" />
                     <span className="text-xs">{project.location}</span>
                   </div>

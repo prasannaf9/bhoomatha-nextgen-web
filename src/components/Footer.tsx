@@ -111,17 +111,18 @@ const Footer = () => {
               <li className="flex items-start gap-2">
                 <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0" />
                 <span className="text-primary-foreground/80">
-                  123 Business Park, Whitefield,<br />
-                  Bangalore 560066, India
+                D.No.48-14-85 & 86, 3rd & 4th Floors, Rama Talkies Junction, Opp. Subham Prema Hospital, 
+                <br/>Visakhapatnam - 530 013.
+
                 </span>
               </li>
               <li className="flex items-center gap-2 text-primary-foreground/80">
                 <Phone className="h-5 w-5 flex-shrink-0" />
-                +1 (234) 567-890
+                +91 7799753333
               </li>
               <li className="flex items-center gap-2 text-primary-foreground/80">
                 <Mail className="h-5 w-5 flex-shrink-0" />
-                info@bhoomathagroup.com
+                bhoomatha@gmail.com
               </li>
             </ul>
           </div>

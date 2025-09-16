@@ -22,7 +22,7 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-3xl">
+        <div className="max-w-8xl">
           <div className="animate-fade-in">
             <span className="inline-block px-4 py-2 mb-6 text-sm font-semibold text-primary-foreground rounded-full">
               Andhra pradesh
@@ -40,7 +40,7 @@ const HeroSection = () => {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="btn-hero group">
+              <Button size="lg" className="btn-hero bg-secondary group text-dark">
                 Explore Our Projects
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
@@ -57,12 +57,36 @@ const HeroSection = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mt-12 md:mt-16">
+          <div className="grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-8 gap-4 md:gap-6 mt-12 md:mt-16">
             {[
-              { value: "20+", label: "Our Ventures" },
-              { value: "40+", label: "Residential Apartments" },
-              { value: "10+", label: "Commercial Apartments" },
-              { value: "50+", label: "Duplex Villas" },
+
+{ value: "3+", label: "Resorts" },
+{ value: "10+", label: "Commercial Apartments" },
+{ value: "25+", label: "Years of Experience" },
+{ value: "30+", label: "Townships" },
+{ value: "40+", label: "Residential Apartments" },
+{ value: "200+", label: "Duplex Villas" },
+
+              { value: "6000+", label: "Satisfied Customers" },
+           
+           
+          
+           
+           
+          
+              { value: "100%", label: "Success Rate" },
+
+              // { value: "10000+", label: "Our Ventures" },
+              // { value: "40+", label: "Residential Apartments" },
+              // { value: "10+", label: "Commercial Apartments" },
+              // { value: "50+", label: "Duplex Villas" },
+              // { value: "50+", label: "Duplex Villas" },
+              // { value: "10+", label: "Commercial Apartments" },
+              // { value: "50+", label: "Duplex Villas" },
+              // { value: "50+", label: "Duplex Villas" },
+
+
+              
             ].map((stat) => (
               <div key={stat.label} className="text-white">
                 <div className="text-2xl sm:text-3xl md:text-4xl font-bold font-heading">{stat.value}</div>
