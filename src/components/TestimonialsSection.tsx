@@ -79,7 +79,7 @@ const TestimonialsSection = () => {
                   ))}
                 </div>
                 
-                <p className="text-muted-foreground mb-6 italic">
+                <p className="text-muted-foreground text-lg mb-6 italic">
                   "{testimonial.content}"
                 </p>
                 
@@ -95,8 +95,8 @@ const TestimonialsSection = () => {
         {/* Partners */}
         <div className="border-t pt-16">
           <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold mb-4 font-heading">Trusted By Leading Companies</h3>
-            <p className="text-muted-foreground">
+            <h3 className="text-5xl font-bold mb-4 font-heading">Trusted By Leading Companies</h3>
+            <p className="text-xl text-muted-foreground">
               Partnering with industry leaders to deliver excellence
             </p>
           </div>

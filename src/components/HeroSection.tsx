@@ -24,8 +24,8 @@ const HeroSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-3xl">
           <div className="animate-fade-in">
-            <span className="inline-block px-4 py-2 mb-6 text-lg font-semibold text-primary-foreground bg-accent/20 backdrop-blur-sm rounded-full font-cursive italic tracking-wider">
-              Excellence in Real Estate Development
+            <span className="inline-block px-4 py-2 mb-6 text-5xl font-semibold text-primary-foreground  rounded-full font-cursive italic tracking-wider">
+              Andhra Pradesh
             </span>
             
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 font-heading leading-tight">
@@ -74,11 +74,11 @@ const HeroSection = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      {/* <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-white/50 rounded-full mt-2 animate-pulse" />
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };
