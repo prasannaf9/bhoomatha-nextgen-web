@@ -31,7 +31,7 @@ const HeroSection = () => {
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 font-heading leading-tight">
         The Bhoomatha Growth Story
 
-              <span className="block text-secondary">Legacy of Trust Future of Scale                
+              <span className="block text-secondary">Legacy of Trust And Future of Scale                
               </span>
             </h1>
             
@@ -74,7 +74,7 @@ const HeroSection = () => {
            
            
           
-              { value: "100%", label: "Success Rate" },
+              { value: "100%", label: "Customer Satisfaction" },
 
               // { value: "10000+", label: "Our Ventures" },
               // { value: "40+", label: "Residential Apartments" },
