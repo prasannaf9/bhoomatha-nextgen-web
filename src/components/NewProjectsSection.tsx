@@ -13,7 +13,7 @@ const NewProjectsSection = () => {
   const projects = [
     {
       id: 1,
-      title: "Svn Swapnlok",
+      title: "Bhoomatha's SVN Swapnlok",
       category: "residential",
       location: "Anadapuram",
       image: Swapnalok,

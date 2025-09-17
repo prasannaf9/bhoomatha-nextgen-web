@@ -217,7 +217,7 @@ const ServicesSection = () => {
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold font-heading mb-1">Our Mission</h3>
                   <p className="text-gray-700">
-                  Our mission is to develop legally approved, strategically located properties that deliver high value and sustainable communities, combining quality, transparency, and long-term growth for homeowners and investors.
+                 we develop legally approved, strategically located properties that deliver high value and sustainable communities, combining quality, transparency, and long-term growth for homeowners and investors.
                   </p>
                 </div>
               </div>

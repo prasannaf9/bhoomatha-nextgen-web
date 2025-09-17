@@ -9,6 +9,8 @@ import WhyBhoomathaSection from "@/components/WhyBhoomathaSection";
 import FullWidthImageSection from "@/components/FullWidthImageSection";
 import Footer from "@/components/Footer";
 import NewProjectsSection from "@/components/NewProjectsSection";
+import ChairmanMessage from "@/components/ChairmanMessage";
+import TeamsSection from "@/components/TeamsSection";
 
 const Index = () => {
   return (
@@ -21,6 +23,8 @@ const Index = () => {
   
         <ProjectsSection />
         <ServicesSection />
+        <ChairmanMessage />
+        <TeamsSection />
         <FullWidthImageSection />
         <WhyBhoomathaSection />
         <TestimonialsSection />
