@@ -23,8 +23,7 @@ const Index = () => {
   
         <ProjectsSection />
         <ServicesSection />
-        {/* <ChairmanMessage />
-        <TeamsSection /> */}
+     
         <FullWidthImageSection />
         <WhyBhoomathaSection />
         <TestimonialsSection />
