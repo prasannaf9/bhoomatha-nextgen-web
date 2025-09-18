@@ -40,19 +40,15 @@ const HeroSection = () => {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="btn-hero bg-secondary group text-dark">
+              <a href="https://www.bhoomathagroup.com/projects" className="btn-hero bg-secondary group text-dark h-11 rounded-md px-8 inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0" target="_blank">
                 Explore Our Projects
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </Button>
+              </a>
               
-              <Button
-                size="lg"
-                variant="outline"
-                className="bg-white/10 backdrop-blur-sm text-white border-white/30 hover:bg-white/20"
-              >
+              <a href="https://www.bhoomathagroup.com/about-us" className="bg-white/10 backdrop-blur-sm text-white border-white/30 hover:bg-white/20 h-11 rounded-md px-8 inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0" target="_blank">
                 <Play className="mr-2 h-5 w-5" />
                 Watch Overview
-              </Button>
+              </a>
             </div>
           </div>
 

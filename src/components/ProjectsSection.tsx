@@ -50,6 +50,14 @@ const ProjectsSection = () => {
     },
   ];
 
+  const getProjectUrl = (id) => {
+    if (id === 1) return "https://www.bhoomathagroup.com/project-details/bhoomatha-svn-swapnlok";
+    if (id === 2) return "https://www.bhoomathagroup.com/project-details/purna-sai-township";
+    if (id === 3) return "https://www.bhoomathagroup.com/project-details/sugandha-meadows";
+    if (id === 4) return "https://www.bhoomathagroup.com/project-details/sindhu-avenues";
+    return "https://www.bhoomathagroup.com/projects";
+  };
+
   const categories = [
     { id: "all", label: "All Projects" },
     { id: "residential", label: "Residential" },
@@ -133,10 +141,10 @@ const ProjectsSection = () => {
                   {project.description}
                 </p>
                 
-                <Button variant="link" className="p-0 h-auto font-semibold text-primary group">
+<a href={getProjectUrl(project.id)} target="_blank" className="p-0 h-auto font-semibold text-primary group inline-flex items-center gap-2 whitespace-nowrap text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 underline-offset-4 hover:underline">
                   View Details
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Button>
+                </a>
               </div>
             </div>
           ))}
@@ -144,10 +152,10 @@ const ProjectsSection = () => {
 
         {/* View All Button */}
         <div className="text-center mt-12">
-          <Button size="lg" className="btn-primary">
+<a href="https://www.bhoomathagroup.com/projects" target="_blank" className="btn-primary h-11 rounded-md px-8 inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0">
             View All Projects
             <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+          </a>
         </div>
       </div>
     </section>

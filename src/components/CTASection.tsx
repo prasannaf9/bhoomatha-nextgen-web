@@ -27,7 +27,7 @@ const CTASection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+917799753333">
+            <a href="https://www.bhoomathagroup.com/contact-us" target="_blank">
               <Button
                 size="lg"
                 className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-xl hover:shadow-2xl transition-all duration-300"
@@ -37,15 +37,17 @@ const CTASection = () => {
               </Button>
             </a>
             
+            <a href="https://www.bhoomathagroup.com/contact-us" target="_blank">
             <Button
               size="lg"
               variant="outline"
               className="bg-white/10 backdrop-blur-sm text-primary-foreground border-primary-foreground/30 hover:bg-white/20"
-              onClick={() => setIsFormOpen(true)}
+           
             >
               <Calendar className="mr-2 h-5 w-5" />
               Schedule Consultation
             </Button>
+            </a>
             <BookingForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
           </div>
 

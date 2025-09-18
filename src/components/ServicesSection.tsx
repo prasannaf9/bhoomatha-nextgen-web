@@ -186,9 +186,9 @@ const ServicesSection = () => {
                   With thousands of happy customers and investors, we take pride in being one of the most trusted real estate brands, delivering high-quality, affordable, and future-ready projects.
                 </p>
 
-                <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg">
+                <a href="https://www.bhoomathagroup.com/projects" target="_blank" className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0">
                   Explore Our Projects
-                </Button>
+                </a>
               </div>
             </div>
           </div>

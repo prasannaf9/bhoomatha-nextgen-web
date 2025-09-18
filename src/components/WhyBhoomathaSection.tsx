@@ -56,9 +56,9 @@ const WhyBhoomathaSection = () => {
 
             {/* CTA Buttons */}
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button size="lg" className="btn-primary">Enquire Now</Button>
-              <Button variant="outline" size="lg">Call Back</Button>
-              <Button variant="outline" size="lg">WhatsApp</Button>
+              <a href="https://www.bhoomathagroup.com/contact-us" target="_blank" className="btn-primary h-11 rounded-md px-8 inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0">Enquire Now</a>
+              <a href="tel:91-77997-53333" target="_blank" className="border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 rounded-md px-8 inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0">Call Back</a>
+              <a href="watsup:91-77997-53333" target="_blank" className="border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 rounded-md px-8 inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0">WhatsApp</a>
             </div>
           </div>
 

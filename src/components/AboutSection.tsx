@@ -51,9 +51,9 @@ Renowned for reliability, innovation, and creating green communities, Bhoomatha 
 
             </p>
 
-            <Button size="lg" className="btn-primary">
+            <a href="https://www.bhoomathagroup.com/about-us" target="_blank" className="btn-primary h-11 rounded-md px-8 inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0">
               Learn More About Us
-            </Button>
+            </a>
           </div>
 
           {/* Features Grid */}

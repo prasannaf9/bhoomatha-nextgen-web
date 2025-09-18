@@ -6,32 +6,29 @@ import logo from "@/assets/logo.webp";
 
 const Footer = () => {
   const quickLinks = [
-    { label: "Privacy Policy" },
-    { label: "Terms of Service" },
-    { label: "Cookie Policy" },
-    { label: "Sitemap" },
+    { label: "Privacy Policy", href: "https://www.bhoomathagroup.com/privacy-policy" },
+    { label: "Careers", href: "https://www.bhoomathagroup.com/careers" },
+   
   ];
 
   const projects = [
-    { label: "Bhoomatha Heights" },
-    { label: "Corporate Plaza" },
-    { label: "Villa Paradise" },
-    { label: "Bhoomatha Square" },
+    { label: "Bhoomatha Heights", href: "https://www.bhoomathagroup.com/projects" },
+    { label: "Corporate Plaza", href: "https://www.bhoomathagroup.com/projects" },
+    { label: "Villa Paradise", href: "https://www.bhoomathagroup.com/projects" },
+    { label: "Bhoomatha Square", href: "https://www.bhoomathagroup.com/projects" },
   ];
 
   const legal = [
-    { label: "Privacy Policy" },
-    { label: "Terms of Service" },
-    { label: "Cookie Policy" },
-    { label: "Sitemap" },
+    { label: "Privacy Policy", href: "https://www.bhoomathagroup.com/privacy-policy" },
+    { label: "Careers", href: "https://www.bhoomathagroup.com/careers" },
+    
   ];
 
   const socialLinks = [
-    { icon: Facebook, label: "Facebook" },
-    { icon: Twitter, label: "Twitter" },
-    { icon: Linkedin, label: "LinkedIn" },
-    { icon: Instagram, label: "Instagram" },
-    { icon: Youtube, label: "YouTube" },
+    { icon: Facebook, label: "Facebook", href: "https://www.facebook.com/bhoomathagroup" },
+    { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/company/bhoomathagroup/" },
+    { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/bhoomathagroup/" },
+    { icon: Youtube, label: "YouTube", href: "https://www.youtube.com/channel/UCLeSKd_nTItjPBk9HiHEzNg" },
   ];
 
   return (
@@ -73,9 +70,9 @@ const Footer = () => {
             {/* Social Links */}
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
-                <span key={index} className="text-primary-foreground/60">
+                <a key={index} href={social.href} target="_blank" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">
                   <social.icon className="w-5 h-5" />
-                </span>
+                </a>
               ))}
             </div>
           </div>
@@ -86,7 +83,7 @@ const Footer = () => {
             <ul className="space-y-2">
               {quickLinks.map((link, index) => (
                 <li key={index} className="text-primary-foreground/80">
-                  {link.label}
+                  <a href={link.href} target="_blank" className="hover:text-primary-foreground transition-colors">{link.label}</a>
                 </li>
               ))}
             </ul>
@@ -98,7 +95,7 @@ const Footer = () => {
             <ul className="space-y-2">
               {projects.map((project, index) => (
                 <li key={index} className="text-primary-foreground/80">
-                  {project.label}
+                  <a href={project.href} target="_blank" className="hover:text-primary-foreground transition-colors">{project.label}</a>
                 </li>
               ))}
             </ul>

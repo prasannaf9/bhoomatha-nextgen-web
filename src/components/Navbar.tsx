@@ -19,12 +19,12 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { label: "Home", href: "#home" },
-    { label: "About Us", href: "#" },
-    { label: "Projects", href: "#" },
-    { label: "Resorts", href: "#" },
-    { label: "NRIs", href: "#" },
-    { label: "Contact Us", href: "#" },
+    { label: "Home", href: "https://bhoomatha.cloudecommerce.in/" },
+    { label: "About Us", href: "https://www.bhoomathagroup.com/about-us" },
+    { label: "Projects", href: "https://www.bhoomathagroup.com/projects" },
+    { label: "Resorts", href: "https://www.bhoomathagroup.com/resorts" },
+    { label: "NRIs", href: "https://www.bhoomathagroup.com/nris" },
+    { label: "Contact Us", href: "https://www.bhoomathagroup.com/contact-us" },
   ];
 
   return (
@@ -40,19 +40,17 @@ const Navbar = () => {
            
           </div>
           <div className="flex items-center gap-3">
-            <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+            <a href="https://www.facebook.com/bhoomathagroup" target="_blank" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
               <Facebook className="h-4 w-4" />
             </a>
-            <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-              <Twitter className="h-4 w-4" />
-            </a>
-            <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+           
+            <a href="https://www.instagram.com/bhoomathagroup/" target="_blank" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
               <Instagram className="h-4 w-4" />
             </a>
-            <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+            <a href="https://www.linkedin.com/company/bhoomathagroup/" target="_blank" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
               <Linkedin className="h-4 w-4" />
             </a>
-            <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+            <a href="https://www.youtube.com/channel/UCLeSKd_nTItjPBk9HiHEzNg" target="_blank" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
               <Youtube className="h-4 w-4" />
             </a>
           </div>
@@ -84,7 +82,7 @@ const Navbar = () => {
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center gap-8">
               {navLinks.map((link) => (
-                <a
+                <a target="_blank"
                   key={link.label}
                   href={link.href}
                   className="text-foreground/80 hover:text-primary font-medium transition-colors duration-200 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
@@ -106,22 +104,20 @@ const Navbar = () => {
                 </a>
               </div>
               <div className="flex gap-2">
-                <Button 
-                  variant="outline"
-                  size="sm"
-                  className="border-primary text-primary hover:bg-primary/10 text-xs h-8 px-3"
-                  onClick={() => setIsBookingFormOpen(true)}
+                <a 
+                  href="https://www.bhoomathagroup.com/book-now"
+                  className="border border-primary text-primary hover:bg-primary/10 text-xs h-8 px-3 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
+                  target="_blank"
                 >
                   Book Now
-                </Button>
-                <Button 
-                  variant="default"
-                  size="sm"
-                  className="bg-primary hover:bg-primary/90 text-xs h-8 px-3"
-                  onClick={() => window.open('https://wa.me/917799753333', '_blank')}
+                </a>
+                <a 
+                  href="https://www.bhoomathagroup.com/site-visit"
+                  className="bg-primary hover:bg-primary/90 text-xs h-8 px-3 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 text-primary-foreground"
+                  target="_blank"
                 >
                   Site Visit
-                </Button>
+                </a>
               </div>
             </div>
 

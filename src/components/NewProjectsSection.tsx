@@ -74,7 +74,11 @@ const NewProjectsSection = () => {
    
   ];
 
- 
+  const getProjectUrl = (id) => {
+    if (id === 1) return "https://www.bhoomathagroup.com/project-details/bhoomatha-svn-swapnlok";
+    if (id === 2) return "https://www.bhoomathagroup.com/project-details/mega-venture-at-anandapuram";
+    return "https://www.bhoomathagroup.com/projects";
+  };
 
   const filteredProjects = activeCategory === "all" 
     ? projects 
@@ -131,10 +135,10 @@ const NewProjectsSection = () => {
                     {project.description}
                   </p>
                 </div>
-                <Button variant="outline" className="w-full h-10 mt-auto group-hover:bg-primary group-hover:text-primary-foreground transition-colors flex items-center justify-center">
+<a href={getProjectUrl(project.id)} target="_blank" className="w-full h-10 mt-auto group-hover:bg-primary group-hover:text-primary-foreground transition-colors flex items-center justify-center border border-input bg-background hover:bg-accent hover:text-accent-foreground inline-flex gap-2 whitespace-nowrap text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0">
                   <span className="truncate">View Project Details</span>
                   <ArrowRight className="ml-2 h-4 w-4 flex-shrink-0 transition-transform group-hover:translate-x-1" />
-                </Button>
+                </a>
               </div>
             </div>
           ))}
@@ -142,10 +146,10 @@ const NewProjectsSection = () => {
 
         {/* View All Button */}
         <div className="text-center mt-12">
-          <Button size="lg" className="btn-primary">
+<a href="https://www.bhoomathagroup.com/projects" target="_blank" className="btn-primary h-11 rounded-md px-8 inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0">
             View All Projects
             <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+          </a>
         </div>
       </div>
     </section>
